@@ -32,9 +32,35 @@ function Resetiraj(){
     document.getElementById("rezultat").innerHTML = " ";
 }
 
+function Shrani(){
+    var filmi = document.getElementById("filmi").value;  // dobimo vrednost input typa in jo shranimo v filmi.
+    let dolzina = parseInt(filmi);                       // v spremenljivko dolzina shranimo stevilko vrednosti iz filma.
+    console.log("tvojih najljubših filmov je " + filmi);
+    
+    if (isNaN(dolzina) || dolzina < 0) {                 // preveri ali je spremenljivka dolzina številka, če ni vrne napako!!! IsNan( not a number)     
+        alert("Vnesi veljavno pozitivno številko.");
+        return;
+    }
+
+    tabela.length = 0;
+
+
+    for (let i = 0; i < dolzina; i++) {                 // s for zanko loopamo skozi vrednost, ki smo jo vpisali in pushamo v array(dodajamo)
+        tabela.push(i);
+    }
+
+    console.log("Tvoja tabela:", tabela);
+
+}
 
 var btn = document.getElementById("izracunaj");
 var btn2 = document.getElementById("resetiraj");
+var btn3 = document.getElementById("shrani");
+let tabela = [];
+
 
 btn.addEventListener("click",buttonClicked);
 btn2.addEventListener("click",Resetiraj);
+btn3.addEventListener("click",Shrani);
+
+
