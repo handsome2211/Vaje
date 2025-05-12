@@ -2,11 +2,11 @@ console.log("javascript deluje");
 
 function buttonClicked(){
     
-    var starost = document.getElementById("starost").value;
-    var paragraf = document.getElementById("rezultat");
+    var starost = document.getElementById("starost").value; // Dobimo vrednost input type elementa.
+    var paragraf = document.getElementById("rezultat");  // Dobimo vrednost paragrafa z id rezultat.
     event.preventDefault()
-    console.log("button clicked");
-    console.log(starost);
+    console.log("button clicked"); // Preverimo če dela event listener.
+    console.log(starost);          // Preverimo če se vrednost shrani v spremenljivko
 
     if(starost < 13){
         console.log("Ti si še otrok");
