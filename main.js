@@ -1,5 +1,45 @@
 console.log("javascript deluje");
 
+
+function kalkulator(event){
+
+    if(event){
+    event.preventDefault();
+    }
+    var st1 = parseFloat(num1.value);
+    var st2 = parseFloat(num2.value);
+    var test = operator.value;
+    var izracun;
+    console.log("vrednost 1 je ",num1.value ,"vrednost 2 je ",num2.value);
+    console.log("tvoja operacija je", test);
+    
+    switch(test){
+        case "minus":
+        izracun = st1 - st2;
+        console.log("izbral si minus rezultat", izracun);
+        rezultat.innerHTML = izracun;
+        console.log(izracun);
+        break;
+
+        case "plus":
+        izracun = st1 + st2;
+        console.log("izbral si plus rezultat", izracun);
+        break;
+
+        case "krat":
+        izracun = st1 * st2;
+        console.log("izbral si krat rezultat", izracun);
+        break;
+
+        case "deljeno":
+        izracun = st1 / st2;
+        console.log("izbral si deljeno rezultat", izracun);
+        break;
+    }
+
+    
+}
+
 function buttonClicked(){
     
     var starost = document.getElementById("starost").value; // Dobimo vrednost input type elementa.
@@ -53,14 +93,20 @@ function Shrani(){
 
 }
 
+var num1 = document.getElementById("tekst");
+var num2 = document.getElementById("tekst2");
+var operator = document.getElementById("operacija");
+var rezultat = document.getElementById("rezultat");
 var btn = document.getElementById("izracunaj");
 var btn2 = document.getElementById("resetiraj");
 var btn3 = document.getElementById("shrani");
+var btn4 = document.getElementById("poslji");
 let tabela = [];
 
 
 btn.addEventListener("click",buttonClicked);
 btn2.addEventListener("click",Resetiraj);
 btn3.addEventListener("click",Shrani);
+btn4.addEventListener("click",kalkulator);
 
 
