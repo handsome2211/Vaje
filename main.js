@@ -4,36 +4,62 @@ console.log("javascript deluje");
 function kalkulator(event){
 
     if(event){
-    event.preventDefault();
+    event.preventDefault();                     
     }
-    var st1 = parseFloat(num1.value);
-    var st2 = parseFloat(num2.value);
+    var st1 = parseFloat(num1.value);               // v st1 sharnimo value od input. parseFloat nekak konverta iz stringa v stevilko, ker input najverjetne shrani kot string tudi ce je številka
+    var st2 = parseFloat(num2.value);               //isto v st2
     var test = operator.value;
     var izracun;
     console.log("vrednost 1 je ",num1.value ,"vrednost 2 je ",num2.value);
     console.log("tvoja operacija je", test);
+
+    
     
     switch(test){
         case "minus":
+        if(isNaN(st1) || isNaN(st2)){                  //preveri ali je vpisana številka IsNan je metoda ki preverja ali je vpisana stevilka
+            alert("prosim vpiši številke");
+            return;
+        }
         izracun = st1 - st2;
         console.log("izbral si minus rezultat", izracun);
-        izid.innerHTML = izracun;
+        rezultat.value = izracun;
         console.log(izracun);
         break;
 
         case "plus":
+        if(isNaN(st1) || isNaN(st2)){
+            alert("prosim vpiši številke");
+            return;
+        }
         izracun = st1 + st2;
         console.log("izbral si plus rezultat", izracun);
+        rezultat.value = izracun;
         break;
 
         case "krat":
+        if(isNaN(st1) || isNaN(st2)){
+            alert("prosim vpiši številke");
+            return;
+        }
         izracun = st1 * st2;
         console.log("izbral si krat rezultat", izracun);
+        rezultat.value = izracun;
         break;
 
         case "deljeno":
+        if(isNaN(st1) || isNaN(st2)){
+            alert("prosim vpiši številke");
+            return;
+        }
+        if(st1 == 0 || st2 == 0 ){
+            console.log("z 0 ni mozno deliti");
+            alert("z 0 ni mozno deliti");
+            return;
+        }
         izracun = st1 / st2;
         console.log("izbral si deljeno rezultat", izracun);
+        rezultat.value = izracun;
         break;
     }
 
