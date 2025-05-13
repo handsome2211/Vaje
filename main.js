@@ -17,7 +17,7 @@ function kalkulator(event){
         case "minus":
         izracun = st1 - st2;
         console.log("izbral si minus rezultat", izracun);
-        rezultat.innerHTML = izracun;
+        izid.innerHTML = izracun;
         console.log(izracun);
         break;
 
@@ -96,7 +96,7 @@ function Shrani(){
 var num1 = document.getElementById("tekst");
 var num2 = document.getElementById("tekst2");
 var operator = document.getElementById("operacija");
-var rezultat = document.getElementById("rezultat");
+var rezultat = document.getElementById("izid");
 var btn = document.getElementById("izracunaj");
 var btn2 = document.getElementById("resetiraj");
 var btn3 = document.getElementById("shrani");
