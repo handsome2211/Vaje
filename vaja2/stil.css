@@ -1,10 +1,63 @@
 body {
-    padding:20px;
+    padding:0px;
+    font-size:25px;
 }
 
 .main {
-    max-width: 1000px;
+    max-width: 100%;
     height: 600px;
     display: flex;
     margin: auto;
+    background:#FFFFE0;
+}
+
+.glavni-okvir{
+    width: 50%;
+    height: 60%;
+    margin: auto;
+    border: 1px solid black;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ljudi{
+    position:relative;
+    top:10px;
+    padding-bottom:10px;
+    font-size:25px;
+}
+
+#stevilo {
+    position:relative;
+    margin-top:20px;
+    margin-bottom:50px;
+    padding-bottom:10px;
+    font-size:25px;
+}
+
+#btn1{
+    margin-bottom:10px;
+    width:150px;
+}
+
+#btn2{
+    margin-bottom:20px;
+    width:150px;
+}
+
+.minibox{
+    text-align: center;
+    width: 100%;
+}
+
+.prej{
+    display:inline-block;
+}
+
+#kolicina{
+    display:inline-block;
 }
