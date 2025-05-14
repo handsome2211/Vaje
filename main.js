@@ -117,6 +117,11 @@ function Shrani(){
 
     console.log("Tvoja tabela:", tabela);
 
+    for(let i  = 0 ; i < tabela.length; i++)
+    {
+        console.log(tabela[i]);
+    }
+    naloga3.value =" ";
 }
 
 var num1 = document.getElementById("tekst");
@@ -128,6 +133,7 @@ var btn2 = document.getElementById("resetiraj");
 var btn3 = document.getElementById("shrani");
 var btn4 = document.getElementById("poslji");
 let tabela = [];
+var naloga3 = document.getElementById("filmi");
 
 
 btn.addEventListener("click",buttonClicked);
