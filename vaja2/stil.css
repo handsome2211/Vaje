@@ -42,11 +42,13 @@ body {
 #btn1{
     margin-bottom:10px;
     width:150px;
+    background:green;
 }
 
 #btn2{
     margin-bottom:20px;
     width:150px;
+    background:red;
 }
 
 .minibox{
