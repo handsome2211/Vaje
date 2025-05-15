@@ -26,12 +26,17 @@ body {
     display:inline-block;
 }
 
-#inputi{
+.vloga{
+    display:none;
+}
+
+.pokazi{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 #gumb{
     display:inline-block;
 }
