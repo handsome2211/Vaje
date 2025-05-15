@@ -1,0 +1,67 @@
+body {
+    margin:0px;
+    border:0px;
+    padding:0px;
+    font-size:20px;
+}   
+
+.glava {
+    height:15vh;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+.filmi {
+    padding-bottom:10px;
+    text-shadow: 0.5px 1px black;
+}
+
+.colum1, .colum2 {
+    max-width: 50%;
+    justify-items: center;
+    display:inline-block;
+}
+
+#inputi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#gumb{
+    display:inline-block;
+}
+
+.lol{
+    position: relative;
+    left: 40px;
+}
+
+
+#inputi > div > input {
+    display:block;
+    margin:5px;
+}
+
+@media screen and (max-width:600px) {
+    #inputi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding:5px;
+    } 
+
+    body{
+        font-size:15px;
+    }
+
+    input{
+        margin:2px;
+    }
+}
