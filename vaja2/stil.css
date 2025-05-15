@@ -12,7 +12,7 @@ body {
 }
 
 .glavni-okvir{
-    width: 50%;
+    width: 40%;
     height: 60%;
     margin: auto;
     border: 1px solid black;
@@ -62,4 +62,21 @@ body {
 
 #kolicina{
     display:inline-block;
+}
+
+@media screen and (max-width: 600px) {
+
+    body{
+        font-size:10px;
+    }
+    
+    #btn1, #btn2 {
+
+        width:70px;
+
+    }
+
+    .ljudi{
+        font-size:10px;
+    }
 }
