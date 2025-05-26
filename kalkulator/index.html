@@ -15,35 +15,35 @@
     <input type="text" class="ekran" id="monitor" readonly/>
     <div class="tipkovnica">
         <div class="vrstica">
-            <button class="stolpec">1</button>
-            <button class="stolpec">2</button>
-            <button class="stolpec">3</button>
-            <button class="stolpec"></button>
-            <button class="stolpec"></button>
+            <button class="stolpec" id="ena" onclick="inputNumber('1')">1</button>
+            <button class="stolpec" id="dve" onclick="inputNumber('2')">2</button>
+            <button class="stolpec" id="tri" onclick="inputNumber('3')">3</button>
+            <button class="stolpec">CE</button>
+            <button class="stolpec">⌫</button>
         </div>
 
         <div class="vrstica">
-            <button class="stolpec">4</button>
-            <button class="stolpec">5</button>
-            <button class="stolpec">6</button>
-            <button class="stolpec">*</button>
-            <button class="stolpec">**</button>
+            <button class="stolpec" id="stiri" onclick="inputNumber('4')">4</button>
+            <button class="stolpec" id="pet" onclick="inputNumber('5')">5</button>
+            <button class="stolpec" id="sest" onclick="inputNumber('6')">6</button>
+            <button class="stolpec" id="krat" onclick ="operator('*')">*</button>
+            <button class="stolpec" id="kvadrat">**</button>
         </div>
 
         <div class="vrstica">
-            <button class="stolpec">7</button>
-            <button class="stolpec">8</button>
-            <button class="stolpec">9</button>
-            <button class="stolpec">-</button>
-            <button class="stolpec">/</button>
+            <button class="stolpec" id="sedem" onclick="inputNumber('7')">7</button>
+            <button class="stolpec" id="osem" onclick="inputNumber('8')">8</button>
+            <button class="stolpec" id="devet" onclick="inputNumber('9')">9</button>
+            <button class="stolpec" id="minus" onclick ="operator('-')">-</button>
+            <button class="stolpec" id="deljeno" onclick ="operator('/')">/</button>
         </div>
 
         <div class="vrstica">
-            <button class="stolpec">0</button>
-            <button class="stolpec">00</button>
-            <button class="stolpec">.</button>
-            <button class="stolpec">+</button>
-            <button class="stolpec">=</button>
+            <button class="stolpec" id="nula" onclick="inputNumber('0')">0</button>
+            <button class="stolpec" id="dvojnaNula" onclick="inputNumber('00')">00</button>
+            <button class="stolpec" id="pika">.</button>
+            <button class="stolpec" id="plus" onclick ="operator('+')">+</button>
+            <button class="stolpec" id="enako" onclick="izracunaj()">=</button>
         </div>
 
        

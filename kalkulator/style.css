@@ -69,3 +69,7 @@ h1 {
     background:rgba(248, 248, 248, 0.9);
     box-shadow: 0px 11px 43px 12px rgb(255, 255, 255);
 }
+
+.ekran{
+    font-size:32px;
+}
