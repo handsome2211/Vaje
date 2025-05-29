@@ -9,6 +9,8 @@ function inputNumber(num) {
  }
 
 function operator(vrednost){
+
+    
     steviloPrej = parseFloat(steviloZdaj);
     console.log(`stevilo ki je shranjeno je ${steviloPrej}`);
     waitingForNewInput = true;
@@ -30,7 +32,12 @@ function operator(vrednost){
         console.log(vrednost);
         break;
     case '/':
-        console.log('izbral si', vrednost)
+        console.log('izbral si', vrednost);
+        kajBo = vrednost;
+        console.log(vrednost);
+        break;
+    case '**':
+        console.log('izbral si', vrednost);
         kajBo = vrednost;
         console.log(vrednost);
         break;
@@ -40,14 +47,43 @@ function operator(vrednost){
 
 
 function izracunaj (){
-    console.log(steviloPrej, steviloZdaj);
-    if(kajBo === '-'){
-    var racun = steviloPrej - parseFloat(steviloZdaj);
-    console.log('izbral si minus');
-    console.log('tvoj rezultat je', racun);
-    monitor.value = racun;
-    }
+
     
+     if(kajBo === '-'){
+        racun = steviloPrej - parseFloat(steviloZdaj);
+        console.log('izbral si minus');
+        console.log('tvoj rezultat je', racun);
+        monitor.value = racun;
+        waitingForNewInput = true;
+    }else if (kajBo === '+'){
+        racun = parseFloat(steviloPrej) + parseFloat(steviloZdaj);
+        console.log('izbral si plus');
+        console.log('tvoj rezultat je', racun);
+        monitor.value = racun;
+    }else if (kajBo === '*'){
+        racun = parseFloat(steviloPrej) * parseFloat(steviloZdaj);
+        console.log('izbral si krat');
+        console.log('tvoj rezultat je', racun);
+        monitor.value = racun;
+    }else if (kajBo === '/'){
+        racun = parseFloat(steviloPrej) / parseFloat(steviloZdaj);
+        console.log('izbral si deljeno');
+        console.log('tvoj rezultat je', racun);
+        monitor.value = racun;
+    }else if (kajBo === '**'){
+        racun = parseFloat(steviloPrej) ** parseFloat(steviloZdaj);
+        console.log('izbral si potenciranje');
+        console.log('tvoj rezultat je',racun);
+        monitor.value = racun;
+    }
+}
+
+function izbrisiVse(){
+    monitor.value = '';
+    kajBo = '';
+    steviloPrej = '';
+    steviloZdaj = '';
+    racun = '';
 }
 
 
