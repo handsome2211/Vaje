@@ -1,4 +1,9 @@
 function preveri(){
+
+        if(vrednost.value ===''){
+            alert('vpiši število');
+            return;
+        }
         if(rng > Number(vrednost.value)){
             prenizka.classList.remove('tooLow');
             prenizka.classList.add('opacity');
@@ -7,6 +12,7 @@ function preveri(){
             poizkusi -=1 ;
             console.log(poizkusi);
             updateGuessCount(poizkusi);
+            vrednost.value = '';
             //koliko.innerHTML = (` ${poizkusi}  Guesses left`);
             if(poizkusi === 0){
                 alert('Try again');
@@ -19,12 +25,14 @@ function preveri(){
             poizkusi -=1 ;
             console.log(poizkusi);
             updateGuessCount(poizkusi);
+            vrednost.value = '';
             //koliko.innerHTML = (` ${poizkusi} Guesses left`);
             if(poizkusi === 0){
                 alert('Try again');
             }
         }else if (rng === Number(vrednost.value)){
             alert('You guessed the correct number!');
+            startAgain();
         }
     
 }
@@ -65,3 +73,9 @@ let previsoka = document.getElementById('tooHigh');
 
 bnt.addEventListener('click',preveri);
 btn1.addEventListener('click',startAgain);
+
+vrednost.addEventListener('keydown',function(event){
+    if(event.key === 'Enter'){
+        preveri();
+    }
+});
