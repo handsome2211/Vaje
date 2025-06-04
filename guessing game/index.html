@@ -23,23 +23,26 @@
                     <div class="row-sredina">
                         <div class="col-12">
                             <div class="input-group-custom">
-                                <div class="col-auto"><input type="textarea" class="vnos"/></div>
-                                <div class="col-auto"><button class="ugani">Guess</button></div>
+                                <div class="col-auto"><input type="text" class="vnos" id="enter"/></div>
+                                <div class="col-auto"><button class="ugani" id="guess">Guess</button></div>
                             </div>
                         </div>
                     </div>
                 </div>
             <div class="center">
-                <div class="tooLow rezultat">Too low!</div>
-                <div class="tooHigh rezultat">Too high!</div>
+                <div class="tooLow rezultat" id="tooLow">Too low!</div>
+                <div class="tooHigh rezultat" id="tooHigh">Too high!</div>
             </div>
-            <div class="container-fluid kolikoSt"> 7 Guesses left</div>
+            <div class="container-fluid kolikoSt" id="kolikoPoizkusov"> 10 Guesses left</div>
+            <div class="d-flex p-2 justify-content-center">
+                <button class="m-5 poizkusi-znova  " id="tryAgain">PLAY AGAIN</button>
+            </div>
         </div>
 
-        
     </div>
 
-<script src ="main.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src ="main.js"></script>
 </body>
 </html>

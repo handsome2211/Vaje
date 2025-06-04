@@ -5,7 +5,7 @@ body {
 }
 
 .main {
-    background-color: gray;
+    background-color: #fff;
     height: 20px;
     height:100vh;
 }
@@ -14,7 +14,8 @@ body {
     max-width:50%;
     min-height: 60vh;;
     margin:auto;
-    background : white;
+    background: #020024;
+    background: linear-gradient(27deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 10%, rgba(0, 191, 255, 1) 100%);
     border:3px solid black;
 }
 
@@ -41,7 +42,7 @@ body {
     }
 
 .vnos:hover {
-    box-shadow: 1px 1px 3px 5px black;
+    box-shadow: 1px 1px 3px 2px black;
     }
 
 .vrsta-2{
@@ -54,6 +55,7 @@ body {
     border-radius: 10px;
     font-size: 30px;
     background: rgb(0, 128, 0,0.5);
+    color:#FFF;
 }
 
 .ugani:hover{
@@ -85,13 +87,20 @@ body {
     }
 
 .rezultat{
-    position:relative;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+    transition: opacity 1s ease; /* Smooth fade in/out */
     font-size:30px;
     font-weight: bold;
-    display:inline-block;
 }
 
 .center{
+    margin-top:30px;    
+    position:relative;
+    height:50px;
     text-align: center;
 }
 .tooLow{
@@ -102,6 +111,10 @@ body {
     opacity:0;
 }
 
+.opacity{
+    opacity:1;
+}
+
 
 .kolikoSt{
     text-align: center;
@@ -109,8 +122,36 @@ body {
     margin-top: 30px;
     font-size: 30px;
     font-weight: bold;
+    transition:opacity 1s ease;
 }
 
+.poizkusi-znova{
+    color:white !important;
+    background:rgb(0, 128, 0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid black;
+    font-weight: bold;
+    width:60%;
+    font-size:30px;
+}
+
+.poizkusi-znova:hover{
+    transform: translateY(-2px);
+    background: rgb(0, 128, 0, 1);
+    transition: 0.5s ease;
+    box-shadow: 2px 2px 5px 5px rgba(0,126,0,1);
+}
+
+.poizkusi-znova:active{
+    transform:translateY(2px);
+    transition:0.5s ease;
+    box-shadow: 2px 2px 5px 5px rgba(0,126,0,1);
+}
+
+.fade-out {
+    opacity: 0;
+}
 @media only screen and (max-width: 768px) {
         .second {
             max-width: 95%;
