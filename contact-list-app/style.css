@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    background:rgb(128, 128, 128,0.5);
+}
+
+.secondary {
+    min-height:60vh;
+    background-color: #f8f9fa;
+    border:1px solid black;
+}
+
+.naslov{
+    height:10vh;
+}
+
+.naslov > h3 {
+    font-size:40px;
+    font-weight: bold;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+
+.kontakti {
+    font-size:30px;
+}
+
+.div {
+    display:flex;
+    flex-direction:row;
+    border:1px solid black;
+
+}
+
+.div1 {
+    display:flex;
+    flex-direction:column;
+    width:50%;
+}
+
+.buttonDiv{
+    align-items:center;
+    justify-content:center;
+}
+
+.imenik{
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+}
