@@ -38,11 +38,11 @@ function dodajKontakte(){
         // v div 1 spremenimo inner html tako da damo ul class in liste. kontakt.ime, kontak.tel ubistvu dostopamo do objecta, ki je notri v arrayju!!!! Ta array ima key-e ime tel in email.
         div1.innerHTML =`                                          
         <ul class="imenik">
-           <li id="ime">${kontakt.ime}
+           <li id="ime">Ime in Priimek : <b>${kontakt.ime}</b>
             <button class="delete-btn" onclick="izbrisiKontakt(${index})">Izbriši</button>
            </li>
-           <li id='tel'>${kontakt.tel}</li>
-           <li id='mail'>${kontakt.email}</li>
+           <li id='tel'>Telefonska številka : <b>${kontakt.tel}</b></li>
+           <li id='mail'>Email : <b>${kontakt.email}</b></li>
         </ul>
         `;
         contactList.appendChild(div1);

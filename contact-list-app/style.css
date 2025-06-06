@@ -67,7 +67,10 @@ body{
 }
 
 #contactList{
-    min-height:10vh;
+    height:13vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
 }
 
 .delete-btn{
