@@ -1,0 +1,35 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  height: 100vh;
+  background: #2c5f2d;
+  margin: 0px;
+}
+
+.secondary {
+  height: 80vh;
+  background: #f98866;
+  margin: auto;
+  padding: 5px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.third {
+  width: 80%;
+  height: 60%;
+  background: #fff;
+  border: 3px solid black;
+}
+
+@media only screen and (max-width: 650px) {
+  .secondary {
+    height: 50vh;
+  }
+}
