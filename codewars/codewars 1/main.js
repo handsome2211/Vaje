@@ -39,18 +39,23 @@ console.log(shraniVrednost);
 function duplicateEncode(word) {
   let result = '';
   for (let i = 0; i < word.length; i++) {
-    let count = 0;
+    //loopamo skozi word. String
+    let count = 0; //resetiramo counter za vasko crko posebej
 
-    let char = word.charAt(i).toLowerCase();
+    let char = word.charAt(i).toLowerCase(); //shranimo v char crko iz stringa
     for (let j = 0; j < word.length; j++) {
+      // loopamo skozi besedo se enkrat
       if (word.charAt(j).toLowerCase() === char) {
-        count++;
+        // preverimo ali se crka se kje ponavlja
+        count++; //prestejemo kolikokrat
       }
     }
     console.log(char);
     if (count === 1) {
-      result += '(';
+      // ce je samo enkrat
+      result += '('; // izpisemo v result (
     } else {
+      // ce je veckrat naredimo )
       result += ')';
     }
   }
