@@ -1,5 +1,12 @@
-const questions = {
-  question: "What is the capital of france",
-  options: ["Ljubljana", "Paris", "Madrid", "London"],
-  answer: "Paris",
-};
+const questions = [
+  {
+    question: "What is the capital of france",
+    options: ["Ljubljana", "Paris", "Madrid", "London"],
+    answer: "Paris",
+  },
+  {
+    question: "What is the capital of france",
+    options: ["Ljubljana", "Paris", "Madrid", "London"],
+    answer: "Paris",
+  },
+];
