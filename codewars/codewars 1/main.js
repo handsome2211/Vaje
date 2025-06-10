@@ -36,6 +36,7 @@ console.log(shraniVrednost);
 //The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once
 // in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
 //1. Kako convertati string v nov string
+/*
 function duplicateEncode(word) {
   let result = '';
   for (let i = 0; i < word.length; i++) {
@@ -66,3 +67,67 @@ console.log(duplicateEncode('din')); // "((("
 console.log(duplicateEncode('recede')); // "()()()"
 console.log(duplicateEncode('Success')); // ")())())"
 console.log(duplicateEncode('(( @')); // "))(("
+*/
+
+//Implement a function that computes the difference between two lists. The function should remove all
+//  occurrences of elements from the first list (a) that are present in the second list (b). The order of elements in the first list should be preserved in the result.
+//If a = [1, 2] and b = [1], the result should be [2].
+
+//1. narediti funkcijo ki primerja 2 arraja
+//2. V rezultat napisati samo vrednosti ki so v arreju 1 in jih ni v 2 arrayu
+
+// subproblems
+// loopat cez array 1 in shraniti vrednosti
+// loopat cez array 2 in shraniti vrednosti
+// v rezultat moramo napisati samo vrednosti , ki so v array 1.
+
+/*
+const array1 = [1, 2, 2, 2, 3];
+const array2 = [1, 2];
+
+function arrayDiff(a, b) {
+  const array3 = [];
+  for (let i = 0; i < a.length; i++) {
+    let isti = false;
+    for (let j = 0; j < b.length; j++) {
+      if (a[i] === b[j]) {
+        isti = true;
+        break;
+      }
+    }
+    if (!isti) {
+      array3.push(a[i]);
+    }
+  }
+  console.log(array3);
+}
+
+arrayDiff(array1, array2);
+*/
+
+//Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained
+/*
+const string = '"The quick brown fox jumps over the lazy dog."';
+function reverseWords(str) {
+  let beseda = '';
+  let rezultat = '';
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== ' ') {
+      beseda = beseda + str[i];
+    }
+    if (str[i] === ' ') {
+      for (let j = beseda.length - 1; j >= 0; j--) {
+        rezultat = rezultat + beseda[j];
+      }
+      rezultat = rezultat + ' ';
+      beseda = '';
+    }
+  }
+  for (let j = beseda.length - 1; j >= 0; j--) {
+    rezultat = rezultat + beseda[j];
+  }
+  return rezultat;
+}
+const test = reverseWords(string);
+console.log(test);
+*/
