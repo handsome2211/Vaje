@@ -21,19 +21,28 @@
     <div class="container-fluid main">
       <div class="d-flex col-12 col-md-10 col-lg-8 secondary">
         <div class="third">
+          <button class="zacni opacity" id="begin">Začni Kviz</button>
           <div class="vrsta-vprasanje">Quizz App</div>
-          <div class="vprasanje">Katero je glavno mesto sirije?</div>
-          <div class="vrsta-gumb">
-            <button class="gumb odgovor1" id="ena">ODGOVOR 1</button>
+
+          <div class="vprasanje opacity-none" id="vprasanje">
+            Katero je glavno mesto sirije?
           </div>
-          <div class="vrsta-gumb">
-            <button class="gumb odgovor1" id="dve">ODGOVOR 1</button>
+          <div class="questins opacity-none" id="questins">
+            <div class="vrsta-gumb">
+              <button class="gumb odgovor1" id="ena">ODGOVOR 1</button>
+            </div>
+            <div class="vrsta-gumb">
+              <button class="gumb odgovor1" id="dve">ODGOVOR 1</button>
+            </div>
+            <div class="vrsta-gumb">
+              <button class="gumb odgovor1" id="tri">ODGOVOR 1</button>
+            </div>
+            <div class="vrsta-gumb">
+              <button class="gumb odgovor1" id="stiri">ODGOVOR 1</button>
+            </div>
           </div>
-          <div class="vrsta-gumb">
-            <button class="gumb odgovor1" id="tri">ODGOVOR 1</button>
-          </div>
-          <div class="vrsta-gumb">
-            <button class="gumb odgovor1" id="stiri">ODGOVOR 1</button>
+          <div id="progress-bar">
+            <div id="progress"></div>
           </div>
         </div>
       </div>
