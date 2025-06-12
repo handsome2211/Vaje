@@ -47,8 +47,14 @@ let q1 = document.getElementById('ena');
 let q2 = document.getElementById('dve');
 let q3 = document.getElementById('tri');
 let q4 = document.getElementById('stiri');
+let koncnidiv = document.getElementById('koncni');
 
 zacni.addEventListener('click', startQuiz);
+
+function progress() {
+  let procenti = document.getElementById('progress');
+  procenti.style.width = (counter / questions.length) * 100 + '%';
+}
 
 function startQuiz() {
   zacni.classList.remove(visible);
@@ -58,6 +64,8 @@ function startQuiz() {
   vpr.classList.remove(hidden);
   vpr.classList.add(visible);
   addQuestion();
+  progress();
+  koncnidiv.textContent = 'Quiz App';
 }
 
 function addQuestion() {
@@ -81,8 +89,11 @@ function checkAnswer(event) {
   counter += 1;
 
   if (counter < questions.length) {
-    addQuestion();
+    setTimeout(addQuestion, 500); //addQuestion();
+    progress();
   } else {
+    koncnidiv.textContent = `imaš ${praviOdg}/5 pravih odgovorov`;
+    progress();
     konec();
     console.log(`imaš ${praviOdg} pravilnih odgovorov`);
   }
@@ -100,4 +111,5 @@ function konec() {
   div1ans.classList.remove(visible);
   div1ans.classList.add(hidden);
   counter = 0;
+  praviOdg = 0;
 }
