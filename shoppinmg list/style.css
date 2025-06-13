@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  height: 100vh;
+}
+
+.vrsta {
+  position: relative;
+  min-height: 80%;
+  height: 80%;
+  background: #d7d7d7;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-shadow: 4px 2px 16px 1px rgba(0, 0, 0, 0.75);
+}
+
+.flex {
+  display: flex;
+
+  text-align: center;
+  color: black;
+  font-size: 50px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.products {
+  flex: 1;
+  border-top: 1px dotted black;
+  background: white;
+}
