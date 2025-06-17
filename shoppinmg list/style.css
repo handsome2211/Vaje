@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -64,6 +65,7 @@ body {
 
 .naslov {
   font-size: 20px;
+  overflow-y: hidden;
 }
 
 .card-1 {
@@ -109,7 +111,16 @@ body {
   height: 20%;
   border-radius: 20px;
 }
+.button-container:hover {
+  scale: 1.05;
+  box-shadow: 1px 1px 3px 5px rgb(218, 203, 203);
+  transform: translateY(1px);
+}
 
+.button-container:active {
+  scale: 0.9;
+  transform: translatey(-2px);
+}
 .cart-btn {
   width: 100%;
   height: 100%;
@@ -131,7 +142,58 @@ body {
   font-size: 30px;
 }
 
-@media screen and (max-width: 500px) {
+.menu {
+  width: 300px;
+  height: 90vh;
+  background: #d7d7d7;
+  position: absolute;
+  right: 0px;
+  top: 80px;
+  z-index: 1001;
+  transform: translatex(300px);
+  transition: transform 1s ease;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  overflow-y: auto; /* Add this - allows vertical scrolling */
+  overflow-x: hidden; /* Add this - prevents horizontal overflow */
+}
+
+.menu-show {
+  transform: translatex(0px);
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+.prazna {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.menu-item {
+  border-bottom: 5px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuName {
+  font-size: 25px;
+}
+
+.menuPrice {
+  font-size: 30px;
+}
+
+.menuImg {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
   .naslov-main {
     display: flex;
     height: 10%;
@@ -140,5 +202,24 @@ body {
     justify-content: flex-start;
     font-size: 25px;
     align-items: center;
+  }
+
+  .menu {
+    width: 200px;
+    height: 100vh;
+    background: #d7d7d7;
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    z-index: 1001;
+    transform: translatex(300px);
+    transition: transform 1s ease;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+  }
+
+  .menu-show {
+    transform: translatex(0px);
+    box-shadow: 3px 3px 3px 3px black;
   }
 }
